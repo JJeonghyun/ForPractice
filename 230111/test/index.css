@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+}
+
+/* .box-container {
+  border: 5px solid firebrick;
+} */
+
+/* 
+.box1,
+.box2,
+.box3,
+.box4,
+.box5 {
+  width: fit-content;
+  font-size: 5rem;
+  border: 5px solid hotpink;
+}
+.box1 {
+  background-color: aqua;
+}
+.box2 {
+  background-color: blue;
+  padding: 15px;
+}
+.box3 {
+  background-color: bisque;
+  margin: 15px;
+}
+.box4 {
+  background-color: darkcyan;
+  padding: 0 15px;
+}
+.box5 {
+  background-color: red;
+  margin: 0 15px;
+} */
+
+/* .display-container {
+  border: 5px solid firebrick;
+}
+
+.display1,
+.display2,
+.display3,
+.display4,
+.display5,
+.display6,
+.display7,
+.display8 {
+  font-size: 5rem;
+  border: 5px solid hotpink;
+}
+.display1 {
+  background-color: aqua;
+  display: block;
+}
+.display2 {
+  background-color: blue;
+  display: inline;
+}
+.display3 {
+  background-color: bisque;
+  display: inline-block;
+}
+.display4 {
+  background-color: darkcyan;
+  display: flex;
+}
+.display5 {
+  background-color: red;
+  display: grid;
+}
+.display6 {
+  background-color: orange;
+  display: inherit;
+}
+.display7 {
+  background-color: rosybrown;
+  display: initial;
+}
+.display8 {
+  background-color: wheat;
+  display: unset;
+} */
+
+/* .position1 {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+.position2 {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+
+  position: absolute;
+
+  top: 100px;
+  right: 100px;
+  bottom: 100px;
+  left: 100px;
+}
+.position3 {
+  background-color: red;
+  top: 0%;
+  left: 100px;
+} */
+
+p.pseudo::after {
+  content: "블라블라end";
+}
+p.pseudo::before {
+  content: "블라블라";
+}
+
+input.pseudo::placeholder {
+  color: red;
+}
+
+a:link {
+  color: brown;
+}
+a:visited {
+  color: cadetblue;
+}
+
+.pseudo:hover {
+  font-size: 30px;
+}
+.pseudo:active {
+  font-size: 50px;
+}
+
+.pseudo:first-child {
+  background-color: lightblue;
+}
+.pseudo:last-child {
+  background-color: lightgoldenrodyellow;
+}
+.pseudo:nth-child(2n) {
+  background-color: lightpink;
+}
