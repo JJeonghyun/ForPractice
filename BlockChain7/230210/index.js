@@ -14,6 +14,8 @@ const stopBtn = document.getElementById("stop");
 const selectElem = document.getElementById("select-account");
 const txInfoElem = document.getElementById("tx-info");
 const txBlockInfoElem = document.getElementById("block-info");
+const blockInfoBox = document.getElementById("block-info-box");
+const txInfoBox = document.getElementById("tx-info-box");
 
 let isCreating = false;
 let interval;
@@ -39,7 +41,21 @@ async function getBlockByNumber() {
     },
   });
   console.log("block : ", block.data.result);
-  txBlockInfoElem.innerHTML = block.data.result.number;
+  const tempBlockHeight = document.createElement("div");
+  const tempBlockDif = document.createElement("div");
+  const tempBlockHash = document.createElement("div");
+
+  blockInfoBox.style.padding = "10px 0";
+
+  tempBlockHeight.innerHTML =
+    "블록의 높이 : " + parseInt(block.data.result.number, 16);
+  tempBlockDif.innerHTML =
+    "블록의 난이도 : " + parseInt(block.data.result.difficulty, 16);
+  tempBlockHash.innerHTML = "Hash 값 : " + block.data.result.hash;
+
+  tempBlockHash.append(tempBlockHeight);
+  tempBlockDif.append(tempBlockHash);
+  blockInfoBox.append(tempBlockDif);
 }
 
 async function getTransaction(_txHash) {
@@ -54,7 +70,21 @@ async function getTransaction(_txHash) {
     },
   });
   console.log("tx hash : ", result);
-  txInfoElem.innerHTML = result.from + " " + result.to;
+
+  const tempTxFrom = document.createElement("div");
+  const tempTxTo = document.createElement("div");
+  const tempBlockNumber = document.createElement("div");
+
+  txInfoBox.style.padding = "10px 0";
+
+  tempTxFrom.innerHTML = "보낸 주소 : " + result.from;
+  tempTxTo.innerHTML = "받은 주소 : " + result.to;
+  tempBlockNumber.innerHTML =
+    "블록의 높이 : " + parseInt(result.blockNumber, 16);
+
+  tempTxTo.append(tempTxFrom);
+  tempBlockNumber.append(tempTxTo);
+  txInfoBox.append(tempBlockNumber);
 }
 
 async function mineStop() {

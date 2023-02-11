@@ -45,8 +45,10 @@
       <select id="select-account"></select>
       <input type="number" id="ether" placeholder="Ether" step="0.001" />
       <button>이더 보내기</button>
-      <div>트랜 잭션의 정보 : <span id="tx-info"></span></div>
-      <div>마지막 블록의 정보 : <span id="block-info"></span></div>
+      <div id="tx-info-box">트랜 잭션의 정보 <span id="tx-info"></span></div>
+      <div id="block-info-box">
+        마지막 블록의 정보<span id="block-info"></span>
+      </div>
     </form>
     <form id="new-wallet">
       <input
