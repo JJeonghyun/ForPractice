@@ -13,7 +13,7 @@ const useWeb3 = () => {
       });
       setAccount(_account);
 
-      const _web3 = new Web3(window.etheruem);
+      const _web3 = new Web3(window.ethereum);
       setWeb3(_web3);
     })();
   }, []);

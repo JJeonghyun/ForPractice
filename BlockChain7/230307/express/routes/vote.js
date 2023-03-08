@@ -26,9 +26,6 @@ router.post("/send", async (req, res) => {
       dataObj.CA = CA;
       break;
     case "voteForCandidate":
-      console.log(req.body.from);
-      console.log(req.body.candidate);
-      console.log(CA);
       dataObj.nonce = await web3.eth.getTransactionCount(req.body.from);
       dataObj.to = CA;
       dataObj.from = req.body.from;

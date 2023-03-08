@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import useWeb3 from "./Hooks/useWeb3";
+import styled from "styled-components";
 
 import Candidate from "./components/Candidate";
 
@@ -18,8 +19,11 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <h1>deploy로 배포하면서 solidity 생성자 들어가는 배열 </h1>
+    <CandidateBox>
+      <h1>
+        migrations폴더 내 deploy.js안의 solidity 생성자로 넘겨준 배열 목록{" "}
+      </h1>
+      <h2>해당 목록들 클릭 시 투표 수가 올라간다 </h2>
       <div>
         {candidateList?.map((item, index) => (
           <Candidate
@@ -30,8 +34,37 @@ function App() {
           />
         ))}
       </div>
-    </div>
+    </CandidateBox>
   );
 }
 
 export default App;
+
+const CandidateBox = styled.div`
+  width: 75%;
+  margin: 0 auto;
+
+  & > h1,
+  h2 {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    & > div {
+      border: 1px solid black;
+      padding: 5px 30px;
+      border-radius: 10px;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+      }
+    }
+  }
+`;
