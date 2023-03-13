@@ -1,0 +1,15 @@
+{
+  "name": "RPS NFT",
+  "description": "Rock, Scissors, Paper with Pinata",
+  "image": "https://gateway.pinata.cloud/ipfs/QmTDC8tseTkeo9xqg67rrGugDy9rsyKvAA3BEgdBLqkEhT",
+  "atrributes": [
+    {
+      "trait_type": "Rank",
+      "value": 1
+    },
+    {
+      "trait_type": "Type",
+      "value": 1
+    }
+  ]
+}
