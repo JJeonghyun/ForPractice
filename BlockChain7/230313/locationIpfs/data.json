@@ -1,0 +1,15 @@
+{
+  "name": "data2 NFT",
+  "description": "data2 NFT in ipfs",
+  "image": "ipfs://QmRqjqnXmReYe4rUhAQEg1jtSzyaZq9zopLf2TobVyKw68",
+  "atrributes": [
+    {
+      "trait_type": "Rank",
+      "value": 1
+    },
+    {
+      "trait_type": "Type",
+      "value": 1
+    }
+  ]
+}

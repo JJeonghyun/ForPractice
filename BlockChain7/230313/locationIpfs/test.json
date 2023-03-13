@@ -1,0 +1,15 @@
+{
+  "name": "test NFT",
+  "description": "test NFT in ipfs",
+  "image": "ipfs://QmdHukBS9bFG9SEpQBUBztbnTpkF7TxFcwA2SFchj1o1KJ",
+  "atrributes": [
+    {
+      "trait_type": "Rank",
+      "value": 1
+    },
+    {
+      "trait_type": "Type",
+      "value": 1
+    }
+  ]
+}
